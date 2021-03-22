@@ -11,14 +11,15 @@ const bookList = gql`
     }
   }
   `
-export default function ExchangeRates() {
+
+export default function InitialQuery() {
   const { loading, error, data } = useQuery(bookList);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
   return data.books.map(({ title, author }) => (
-    <div key={title}>
+    <div >
       <p>
         {title}: {author}
       </p>
