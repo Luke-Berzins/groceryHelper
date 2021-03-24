@@ -18,7 +18,6 @@ type User {
   password: String!
 }
 
-
 type Ingredient {
   id: ID!
   name: String!

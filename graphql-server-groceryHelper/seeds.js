@@ -34,7 +34,11 @@ const ingredients = [
 const recipes = [
   {
     name: 'Shrimp Pasta',
-    user: false,
+    user: {
+      name: 'jimmy3',
+      email: 'test3@gmail.com',
+      password: 'password',
+    },
     ingredients: [
       {
         name: 'Garlic',
@@ -53,7 +57,11 @@ const recipes = [
   },
   {
     name: 'Tomato Soup',
-    user: true,
+    user: {
+      name: 'jimmy3',
+      email: 'test3@gmail.com',
+      password: 'password',
+    },
     ingredients: [
       {
         name: 'Salt',
@@ -68,7 +76,11 @@ const recipes = [
   },
   {
     name: 'Kale Salad',
-    user: false,
+    user: {
+      name: 'jimmy',
+      email: 'test@gmail.com',
+      password: 'password',
+    },
     ingredients: [
       {
         name: 'Salt',
@@ -83,7 +95,11 @@ const recipes = [
   },
   {
     name: 'Grilled Cheese',
-    user: true,
+    user: {
+      name: 'jimmy',
+      email: 'test@gmail.com',
+      password: 'password',
+    },
     ingredients: [
       {
         name: 'Salt',

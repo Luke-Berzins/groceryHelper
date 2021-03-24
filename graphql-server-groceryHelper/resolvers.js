@@ -2,9 +2,9 @@ const { users, recipes, ingredients } = require('./seeds')
 
 const resolvers = {
   Query: {
-    user: () => users,
+    users: () => users,
     ingredients: () => ingredients,
-    recipe: () => recipes,
+    recipes: () => recipes,
   },
 };
 
