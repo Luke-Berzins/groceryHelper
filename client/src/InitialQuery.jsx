@@ -1,30 +1,45 @@
 import React from 'react'
 import { useQuery, gql } from "@apollo/client";
-import { ApolloProvider } from '@apollo/client';
 
 
-export const bookList = gql`
+
+const groceryList = gql`
   {
-    books {
-      title
-      author
+    recipes {
+      name
+        ingredients {
+          name
+          price
+        }
+      amount
     }
   }  
   `
 
 
-export function InitialQuery(props) {
-  
-  const { loading, error, data } = useQuery(bookList);
+export default function InitialQuery(props) {
+  const { loading, error, data } = useQuery(groceryList);
+  console.log(data)
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
-
-  return data.books.map(({ title, author }) => (
-    <div key={title}>
+  let total = 0;
+  return data.recipes.map(({ name, amount, ingredients}) => (
+    <div >
+      <h1>
+        {name}:
+      </h1>
       <p>
-        {title}: {author}
+        { 
+        ingredients.map( (ingredient, index) => {  
+          total += (ingredient.price * amount[index])    
+          return <p key={ingredient.name}>{ingredient.name} : {ingredient.price * amount[index]}</p>
+        })}
       </p>
+      <p>Total : {total}</p>
+          <div style={{ display: 'none' }}>{total = 0}
+
+        </div>
   </div>
   ));
 }
