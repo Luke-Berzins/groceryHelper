@@ -31,12 +31,14 @@ export default function InitialQuery(props) {
       </h1>
       <p>
         { 
-        ingredients.map( (ingredient, index) => {  
-          total += (ingredient.price * amount[index])    
-          return <p key={ingredient.name}>{ingredient.name} : {ingredient.price * amount[index]}</p>
+        ingredients.map( (ingredient, index) => { 
+          const ingredientTotal = ingredient.price * amount[index] * .01;
+          total += ingredientTotal;
+
+          return <p key={ingredient.name}>{ingredient.name} @ {'$' + ingredient.price * .01} x {amount[index]} : {'$' + ingredientTotal}</p>
         })}
       </p>
-      <p>Total : {total}</p>
+      <p>Total : {'$' + total}</p>
           <div style={{ display: 'none' }}>{total = 0}
 
         </div>
