@@ -1,14 +1,26 @@
 const users = [
   {
     id: 1,
-    name: 'jimmy3',
-    email: 'test3@gmail.com',
+    name: 'jane',
+    email: 'jane@gmail.com',
     password: 'password',
   },
   { 
 
     id: 2,
     name: 'jimmy',
+    email: 'test@gmail.com',
+    password: 'password',
+  },
+  { 
+    id: 3,
+    name: 'luke',
+    email: 'test@gmail.com',
+    password: 'password',
+  },
+  { 
+    id: 4,
+    name: 'luke',
     email: 'test@gmail.com',
     password: 'password',
   },
@@ -22,7 +34,7 @@ const ingredients = [
   },
   { 
 
-    id: 3,
+    id: 2,
     name: 'Salt',
     price: 200
   },
@@ -43,86 +55,37 @@ const recipes = [
   {
     id: 1,
     name: 'Shrimp Pasta',
-    user: {
-      name: 'jimmy3',
-      email: 'test3@gmail.com',
-      password: 'password',
-    },
-    ingredients: [
-      {
-        name: 'Garlic',
-        price: 100
-      },
-      {
-        name: 'Salt',
-        price: 200
-      },
-      {
-        name: 'Pepper',
-        price: 300
-      }
-    ],
+    user: 3,
+    ingredients: [ ingredients[0], ingredients[2], ingredients[3] ],
     amount: [3, 3, 3]
   },
   { 
 
     id: 3,
     name: 'Tomato Soup',
-    user: {
-      name: 'jimmy3',
-      email: 'test3@gmail.com',
-      password: 'password',
-    },
-    ingredients: [
-      {
-        name: 'Salt',
-        price: 200
-      },
-      {
-        name: 'Pepper',
-        price: 300
-      }
-    ],
+    user: 1,
+    ingredients: [ ingredients[0], ingredients[2] ],
     amount: [2, 2]
   },
   {
     id: 3,
     name: 'Kale Salad',
-    user: {
-      name: 'jimmy',
-      email: 'test@gmail.com',
-      password: 'password',
-    },
-    ingredients: [
-      {
-        name: 'Salt',
-        price: 200
-      },
-      {
-        name: 'Pepper',
-        price: 300
-      }
-    ],
-    amount: [1, 1]
+    user: 2,
+    ingredients: [ ingredients[0], ingredients[2], ingredients[3] ],
+    amount: [1, 1, 3]
   },
   {
     id: 4,
     name: 'Grilled Cheese',
-    user: {
-      name: 'jimmy',
-      email: 'test@gmail.com',
-      password: 'password',
-    },
-    ingredients: [
-      {
-        name: 'Salt',
-        price: 200
-      },
-      {
-        name: 'Pepper',
-        price: 300
-      }
-    ],
+    user: 1,
+    ingredients: [ ingredients[0], ingredients[1], ingredients[2] ],
+    amount: [1, 2, 2]
+  },
+  {
+    id: 5,
+    name: 'Breakfast',
+    user: 2,
+    ingredients: [ ingredients[0], ingredients[1] ],
     amount: [1, 2]
   }
 ]

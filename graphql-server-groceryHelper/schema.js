@@ -27,7 +27,7 @@ type Ingredient {
 type Recipe {
   id: ID!
   name: String!
-  user: User
+  user: Int!
   ingredients: [Ingredient]!
   amount: [Int]
 }
