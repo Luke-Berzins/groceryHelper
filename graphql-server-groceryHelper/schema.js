@@ -12,7 +12,7 @@ const typeDefs = gql`
 # type defines the queryable fields for every book in our data source.
 
 type User {
-  id: ID!
+  id: ID! 
   name: String!
   email: String!
   password: String!

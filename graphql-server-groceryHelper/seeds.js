@@ -1,10 +1,13 @@
 const users = [
   {
+    id: 1,
     name: 'jimmy3',
     email: 'test3@gmail.com',
     password: 'password',
   },
-  {
+  { 
+
+    id: 2,
     name: 'jimmy',
     email: 'test@gmail.com',
     password: 'password',
@@ -13,18 +16,23 @@ const users = [
 
 const ingredients = [
   {
+    id: 1,
     name: 'Garlic',
     price: 100
   },
-  {
+  { 
+
+    id: 3,
     name: 'Salt',
     price: 200
   },
   {
+    id: 3,
     name: 'Pepper',
     price: 300
   },
   {
+    id: 4,
     name: 'Beans',
     price: 1200
   }
@@ -33,6 +41,7 @@ const ingredients = [
 
 const recipes = [
   {
+    id: 1,
     name: 'Shrimp Pasta',
     user: {
       name: 'jimmy3',
@@ -55,7 +64,9 @@ const recipes = [
     ],
     amount: [3, 3, 3]
   },
-  {
+  { 
+
+    id: 3,
     name: 'Tomato Soup',
     user: {
       name: 'jimmy3',
@@ -75,6 +86,7 @@ const recipes = [
     amount: [2, 2]
   },
   {
+    id: 3,
     name: 'Kale Salad',
     user: {
       name: 'jimmy',
@@ -94,6 +106,7 @@ const recipes = [
     amount: [1, 1]
   },
   {
+    id: 4,
     name: 'Grilled Cheese',
     user: {
       name: 'jimmy',
