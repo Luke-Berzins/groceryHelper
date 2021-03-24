@@ -1,9 +1,10 @@
-const { books, ingredients } = require('./seeds')
+const { users, recipes, ingredients } = require('./seeds')
 
 const resolvers = {
   Query: {
-    books: () => books,
+    user: () => users,
     ingredients: () => ingredients,
+    recipe: () => recipes,
   },
 };
 
