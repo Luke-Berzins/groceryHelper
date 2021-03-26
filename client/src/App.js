@@ -1,11 +1,24 @@
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+
 import './App.css';
-import InitialQuery from "./InitialQuery"
+import Landing from './components/pages/landing/Landing'
+
 
 
 
 function App() {
   return (
-        <InitialQuery />
+        <Router>
+          <Switch>
+            <Route path='/'>
+              <Landing />
+            </Route> 
+          </Switch>
+        </Router>
   );
 }
 

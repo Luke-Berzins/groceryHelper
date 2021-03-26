@@ -20,7 +20,7 @@ const users = [
   },
   { 
     id: 4,
-    name: 'luke',
+    name: 'lizzy',
     email: 'test@gmail.com',
     password: 'password',
   },
@@ -87,6 +87,13 @@ const recipes = [
     user: 2,
     ingredients: [ ingredients[0], ingredients[1] ],
     amount: [1, 2]
+  },
+  {
+    id: 6,
+    name: 'Butter chicken',
+    user: 3,
+    ingredients: [ ingredients[0], ingredients[2] ],
+    amount: [1, 1]
   }
 ]
 
