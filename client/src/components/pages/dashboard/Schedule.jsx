@@ -3,7 +3,7 @@ import DayList from './DayList'
 import './Schedule.scss'
 
 
-export default function Schedule(props) {
+export default function Schedule() {
   
 
   
@@ -11,7 +11,7 @@ export default function Schedule(props) {
 
   return (
     <div>
-      < DayList />
+      <DayList />
     </div>
   )
 }
