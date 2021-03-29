@@ -6,6 +6,7 @@ import {
 
 import './App.css';
 import Landing from './components/pages/landing/Landing'
+import Dashboard from './components/pages/dashboard/Dashboard'
 
 
 
@@ -14,6 +15,9 @@ function App() {
   return (
         <Router>
           <Switch>
+          <Route path='/dashboard'>
+              <Dashboard />
+            </Route> 
             <Route path='/'>
               <Landing />
             </Route> 
