@@ -1,16 +1,35 @@
+import React from 'react'
+import DayItem from './DayItem'
+
+
 export default function DayList() {
   let dayList = []
   let today = new Date() 
+  let currentMonth;
   for (let i = 0; i < 13; i++) {
     const month= ["January","February","March","April","May","June","July",
     "August","September","October","November","December"];
     let calandar = new Date(today.setDate(today.getDate() + 1 ))
-    dayList.push(month[calandar.getMonth()] + ' ' + calandar.getDate()) 
+    if (calandar.getMonth() !== currentMonth) {
+      currentMonth = calandar.getMonth()
+      dayList.push(month[calandar.getMonth()] + ' ' + calandar.getDate()) 
+    } else {
+      dayList.push(calandar.getDate()) 
+    }
   }
 
 
 
-  return dayList.map(day => {
-    return <div>{day}</div> 
-  })
+  return (
+    <div>
+
+      {dayList.map(day => {
+        return <DayItem 
+                date={day}
+                /> 
+      })}
+    </div>
+  )
+  
+  
 }
