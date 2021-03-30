@@ -1,9 +1,13 @@
+import './DayItem.scss'
+
+
 export default function DayItem(props) {
 
 
   return (
-    <div>
-      <h5>{props.date}</h5>
+    <div className="dayItem">
+      <h2 className="dayDate">{props.date}</h2>
+      <p>recipe x</p>
     </div>
   )
 }
