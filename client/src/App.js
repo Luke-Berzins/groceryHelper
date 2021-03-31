@@ -7,19 +7,22 @@ import {
 import './App.css';
 import Landing from './components/pages/landing/Landing'
 import Dashboard from './components/pages/dashboard/Dashboard'
-import { useCookies } from 'react-cookie';
+import Login from './components/pages/login/Login'
+
 
 
 
 function App() {
-  const [cookies, setCookie] = useCookies(['name']);
 
   return (
         <Router>
           <Switch>
-          <Route path='/dashboard'>
+            <Route path='/dashboard'>
               <Dashboard />
-          </Route> 
+            </Route> 
+            <Route path='/login'>
+              <Login />
+            </Route> 
             <Route path='/'>
               <Landing />
             </Route> 
