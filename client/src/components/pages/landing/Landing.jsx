@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Landing.scss'
 
 export default function Landing(props) {
-  let [currentDate, setCurrentDate] = useState();
+
 
   return (
     <div>
