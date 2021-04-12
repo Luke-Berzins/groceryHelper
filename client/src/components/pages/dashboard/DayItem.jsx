@@ -1,5 +1,5 @@
 export default function DayItem(props) {
-
+  console.log('../')
 
   return (
     <div>
