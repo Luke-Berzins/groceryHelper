@@ -10,8 +10,9 @@ export default function Schedule() {
   
 
   return (
-    <div>
-      <DayList />
-    </div>
+      <div className="dayListHolder">
+        <DayList />
+      </div>
+  
   )
 }

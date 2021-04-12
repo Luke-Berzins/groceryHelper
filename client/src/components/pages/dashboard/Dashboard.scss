@@ -1,7 +1,13 @@
 .dashboard {
   display: flex;
+  .schedule {
+    width: 75%;
+  }
+
+  .sideNav {
+    width:25%;
+    background-color: lightcoral;
+  }
 }
 
-.sideNav {
-  width:25%;
-}
+
