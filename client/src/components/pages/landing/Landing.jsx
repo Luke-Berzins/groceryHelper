@@ -12,6 +12,8 @@ export default function Landing(props) {
       <nav>
         <p>Hello</p>
         <Link to="/dashboard">dashboard</Link>
+        <br></br>
+        <Link to="/login">login</Link>
       </nav>
 
 

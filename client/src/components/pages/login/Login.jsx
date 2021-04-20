@@ -15,7 +15,7 @@ export default function Login(props) {
   return (
     <div>
       <div className="zform">
-      
+      <p>BRO {values.name}</p>
       <form onSubmit={handleSubmit}>
         <input type="text" 
                name="name"

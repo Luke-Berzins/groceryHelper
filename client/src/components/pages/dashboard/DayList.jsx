@@ -13,7 +13,7 @@ export default function DayList() {
      tomorrow.setDate(tomorrow.getDate() + 1)
      dayList.push(tomorrow.toDateString().substr(0, 10))
   }
-    console.log('testgit')
+    
 
 
   return dayList.map((day, index) => {
