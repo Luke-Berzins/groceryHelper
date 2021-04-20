@@ -1,9 +1,10 @@
 export default function DayItem(props) {
-  console.log('../')
 
-  return (
-    <div>
-      <h5>{props.date}</h5>
-    </div>
-  )
+
+    return (
+        <div>
+            <h1>{props.dayTitle}</h1>
+            <p>Hello</p>
+        </div>
+    )
 }
