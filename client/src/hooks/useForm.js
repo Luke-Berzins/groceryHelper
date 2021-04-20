@@ -10,10 +10,11 @@ const useForm = () => {
 
 
   const handleChange = e => {
-    const { name, value } = e.target
+    const { name, value, password } = e.target
     setValues({
       ...values,
-      [name] : value
+      [name] : value,
+      [password] : password,
     })
   }
 
