@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useCookies } from 'react-cookie'
 
 
-
 const useForm = () => {
   const [values, setValues] = useState({})
   const [errors, setErrors] = useState({
@@ -12,7 +11,6 @@ const useForm = () => {
 
   const handleChange = e => {
     const { name, value } = e.target
-    const jim = e.target
     console.log(name, value)
     setValues({
       ...values,
@@ -23,7 +21,8 @@ const useForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(values.email, values.password)
+    
+
   }
 
   return { handleChange, handleSubmit, values }

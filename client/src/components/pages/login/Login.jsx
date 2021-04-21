@@ -1,8 +1,26 @@
+import { gql, useQuery } from '@apollo/client'
 import React, { useState } from 'react'
 import { useCookies } from 'react-cookie'
 import  useForm  from '../../../hooks/useForm'
 import './Login.scss'
 
+
+const userVerification = gql`
+  {
+    recipes {
+      name
+        ingredients {
+          name
+          price
+        }
+      amount
+    }
+  }  
+  `
+
+const login = (data) => {
+  console.log(data)
+}
 
 export default function Login(props) {
   const { handleChange, handleSubmit, values } = useForm()
@@ -12,7 +30,7 @@ export default function Login(props) {
     <div>
       <div className="form">
       <p>Hello {cookies.name} !</p>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={login(useQuery(userVerification))}>
         <p>{values.email}</p>
         <label for="email">Email</label>
         <input type="text" 
