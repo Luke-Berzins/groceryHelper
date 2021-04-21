@@ -14,22 +14,24 @@ export default function Login(props) {
 
   return (
     <div>
-      <div className="zform">
-      <p>BRO {values.name}</p>
-      <p>BRO {values.password}</p>
+      <div className="form">
       <form onSubmit={handleSubmit}>
+        <p>{values.email}</p>
+        <label for="email">Email</label>
         <input type="text" 
-               name="name"
-               placeHolder="name"
-               value={values.name}
+               name="email"
+               placeHolder="email"
+               value={values.email}
                onChange={handleChange}
-        ></input>
+               ></input>
+        <p>BRO {values.password}</p>
+        <label for="password">Password</label>
         <input type="text" 
                name="password"
-               placeHolder="name"
+               placeHolder="password"
                value={values.password}
                onChange={handleChange}
-        ></input>  
+        ></input> 
         <button type="submit" >Hi</button>
       </form>
       </div>
