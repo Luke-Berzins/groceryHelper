@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
 
 const useForm = () => {
-  const [values, setValues] = useState({
-    name: ''
-  })
+  const [values, setValues] = useState({})
   const [errors, setErrors] = useState({
     name: ''
   })
 
 
   const handleChange = e => {
-    const { name, value, email, password } = e.target
+    const { name, value } = e.target
+    const jim = e.target
+    console.log(name, value)
     setValues({
       ...values,
       [name] : value,
     })
+    console.log(values)
   }
 
   const handleSubmit = e => {
     e.preventDefault()
+    console.log(values.email, values.password)
   }
 
   return { handleChange, handleSubmit, values }
