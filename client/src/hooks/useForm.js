@@ -19,13 +19,9 @@ const useForm = () => {
     console.log(values)
   }
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    
+  
 
-  }
-
-  return { handleChange, handleSubmit, values }
+  return { handleChange, values }
 }
 
 export default useForm
